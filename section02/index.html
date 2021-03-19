@@ -19,8 +19,15 @@
     </header>
     <section id="user-goal">
       <h2>My Course Goal</h2>
+      <!--html 안에 바인딩할 때 {{ 안에 data : 자체가 함수이기 때문에 정의한 이름만 작성 }}-->
       <p>{{ courseGoal }}</p>
+      <!-- 속성에 바인딩 할 때 v-bind: 사용 -->
       <p>Learn more <a v-bind:href="aboutLink" target="_blank">about Vue</a></p>
+      <!-- 간단한 자바스크립트도 작성 가능 -->
+      <p>{{ 1 + 1 }}</p>
+      <!-- method : 함수로 불러옴 -->
+      <p>{{ outputGoal() }}</p>
+
     </section>
   </body>
 </html>
