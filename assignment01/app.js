@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return {
             outputName: 'NM JANG',    // 1) Output your name 
             outputAge: 30,          // 2) Output your age
-            imgUrl: 'https://images.app.goo.gl/thqLj6JDALxVsV5N8' //5) Display some image you found via Google
+            imgUrl: 'https://picjumbo.com/wp-content/uploads/golden-gate-bridge-pillar-2210x1473.jpg' //5) Display some image you found via Google
         };
     },
     methods: {
