@@ -2,7 +2,7 @@ const app = Vue.createApp({
     data() {
         return{
             paragraph:'OUTPUT',
-            confirmParagraph: 'OUTPUT'
+            confirmParagraph: 'OUTPUT only Press the Enter Key'
         }
     },
     methods:{
