@@ -18,8 +18,16 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="counter++">Add</button>
-      <button v-on:click="counter--">Remove</button>
+      <div class="btns">
+        <!-- html안에 많은 로직을 두는 것은 좋은 방법이 아니다!! html안에는 최대한 ouputing data만 작성하는것이 좋다! -->
+        <button v-on:click="counter++">Add</button>
+        <button v-on:click="counter--">Remove</button>
+      </div>
+      <div class="btns">
+        <!-- 그래서 methods에 로직을 넣어 함수로 불러온다. -->
+        <button v-on:click="counterAdd()">Add 2</button>
+        <button v-on:click="counterRemove()">Remove 2</button>
+      </div>
       <p>Result: {{ counter }}</p>
     </section>
   </body>
