@@ -26,11 +26,21 @@
       <div class="btns">
         <!-- 그래서 methods에 로직을 넣어 함수로 불러온다. -->
         <button v-on:click="counterAdd(5)">Add 2</button>
-        <button v-on:click="counterRemove(5)">Remove 2</button>
+                      <!-- right click modifier -->
+        <button v-on:click.right="counterRemove(5)">Remove 2</button>
       </div>
       <p>Result: {{ counter }}</p>
-      <input type="text" v-on:input='setName'>
+      <input type="text" v-on:input='setName' >
       <p>Name : {{ myName }}</p>
+      <!-- modifiers -->
+      <!-- prevent modifier 덕분에 event후에 페이지 reload가 되지 않는다 -->
+        <!-- event modifier: stop, prevent, capture, self, once, passive 등 -->
+        <!-- key modifier: enter, page-down, enver, tab, delete, space, up, down, left, right 등등 -->
+      <form action="#" v-on:submit.prevent="submitForm" v-on:keyup.enter="confirmName">
+        <input type="text">
+        <button>Sign Up</button>
+        <p>Name : {{ confirmedName }}</p>
+      </form>
     </section>
   </body>
 </html>
