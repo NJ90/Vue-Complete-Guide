@@ -5,12 +5,12 @@ const app = Vue.createApp({
     };
   },
 
-  methods: {
-    counterAdd(){
-      this.counter = this.counter + 1
+  methods: { //메소드에 arguments를 넘겨봄. 매개변수(parameter) 주목
+    counterAdd(parameter){
+      this.counter = this.counter + parameter
     },
-    counterRemove(){
-      this.counter = this.counter - 1
+    counterRemove(parameter){
+      this.counter = this.counter - parameter
     }
   }
 });
