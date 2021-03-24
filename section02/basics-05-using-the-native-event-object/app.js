@@ -13,7 +13,7 @@ const app = Vue.createApp({
       if(value === ''){
         this.fullname = '';
       } else {
-        this.fullname = value + '' + 'JANG'
+        this.fullname = value + '' + this.lastName
       }
     },
     lastName(value){
@@ -27,10 +27,10 @@ const app = Vue.createApp({
   computed:{//computed is similar with method, but it can use like a data property, not like a method.
     // fullname(){//computed property덕분에 name 부분 함수가 독립적으로 동작함을 알 수 있음
     //   console.log('Running again..');
-    //   if (this.name === ''){
+    //   if (this.name === '' || this.lastName === ''){
     //     return '';
     //   }
-    //   return this.name + '' + 'JANG'
+    //   return this.name + '' + this.lastName;
     // }
   },
   methods: {

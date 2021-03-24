@@ -23,10 +23,11 @@
       <p>Result: {{ counter }}</p>
       <!-- <input type="text" v-bind:value="name" v-on:input="setName($event, 'Schwarzmüller')"> -->
       <!-- v-model="name"은 v-bind:value="name" v-on:input="setName($event, 'Schwarzmüller')"의 shortcut이라고 생각하면 된다.  -->
-      <input type="text" v-model="name">
-      <input type="text" v-model="lastName">
+      <input type="text" value="name" v-model="name">
+      <input type="text" value="fullname" v-model="lastName">
+      <!-- <input type="text" v-model="lastName"> -->
       <button v-on:click="resetInput">Reset Input</button>
-      <p>Your Name: {{ name }}</p>
+      <!-- <p>Your Name: {{ name }}</p> -->
       <p>Your full Name: {{ fullname }}</p>
     </section>
   </body>
