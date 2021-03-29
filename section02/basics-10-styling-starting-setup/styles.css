@@ -37,4 +37,5 @@ header {
 
 .active{
   border-color: red;
+  background-color: salmon;
 }

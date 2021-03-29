@@ -18,10 +18,14 @@
     </header>
     <section id="styling">
       <!-- 인라인 스타일 작성 방식 -->
-      <div class="demo" :style="'border-color: red;'" @click="boxSelected('A')"></div>
-      <div class="demo" :style="{borderColor: 'red'}" @click="boxSelected('A')"></div>
-      <div class="demo" :style="{borderColor: boxASelected ? 'red' : '#ccc'}" @click="boxSelected('A')"></div>
+      <!-- <div class="demo" :style="'border-color: red;'" @click="boxSelected('A')"></div> -->
+      <!-- <div class="demo" :style="{borderColor: 'red'}" @click="boxSelected('A')"></div> -->
+      <!-- <div class="demo" :style="{borderColor: boxASelected ? 'red' : '#ccc'}" @click="boxSelected('A')"></div> -->
 
+      <!-- class 바인딩하기 -->
+      <!-- <div :class="'boxASelected' ? 'demo active' : 'demo'" @click="boxSelected('A')"></div> -->
+      <!-- <div :class="{demo: true, active: boxASelected}" @click="boxSelected('A')"></div> -->
+      <div class="demo" :class="{active: boxASelected}" @click="boxSelected('A')"></div>
       <div class="demo" @click="boxSelected('B')"></div>
       <div class="demo" @click="boxSelected('C')"></div>
     </section>
